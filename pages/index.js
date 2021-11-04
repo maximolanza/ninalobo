@@ -11,7 +11,7 @@ import { GraphQLClient, gql } from "graphql-request";
 
 export async function getStaticProps() {
   const graphcms = new GraphQLClient(
-    'https://api-us-east-1.graphcms.com/v2/ckvk8b9lu68mc01z09pun1ugy/master'
+    "https://api-us-east-1.graphcms.com/v2/ckvk8b9lu68mc01z09pun1ugy/master"
   );
 
   console.log(graphcms)
