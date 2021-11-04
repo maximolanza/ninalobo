@@ -1,0 +1,118 @@
+#hamburguer {
+  display: none;
+  visibility: hidden;
+}
+#menu {
+ display: flex;
+  visibility:visible;
+}
+
+@media (max-width: 1110px) {
+
+
+  .overlayMenuOpen{
+    top: 0px;
+    opacity: 1;
+    display: block;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    padding: 3vh;
+    background-image: linear-gradient(var(--tree-pink), var(--primary-blue));
+    overflow-y: hidden;
+    transition: all 2s ease-out;
+  }
+  
+  .overlayMenu a{
+    transition: all .6s ease-out;
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 4vh;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  
+
+  .nav .menu {
+    display: none;
+    visibility: hidden;
+   }
+  #hamburguer {
+    display: block ;
+    visibility: visible;
+    z-index: 999;
+  }
+
+  .hamburguerButton{
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: -25px;
+    padding: 27px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    position: fixed;
+    float: left;
+    right: 20px;
+    top: 0;
+  }
+
+  .hamburguerButton:focus{
+    background-color: transparent;
+  }
+  .hamburguerButton:active{
+    background-color: transparent;
+  }
+  .hamburguerButton:hover{
+    background-color: transparent;
+  }
+
+  .hamburguerLine{
+    transition: all .2s ease-out;
+    display: block;
+   
+    height: 7px;
+    width: 49px;
+    padding: 2px 2px;
+    margin: 2px;
+    opacity: 1;
+  }
+
+  .nav-transparent .hamburguerLine{
+    background-color: white;
+  }
+
+  .nav-bg .hamburguerLine{
+    background-color: black;
+  }
+  
+  .middleHamb{
+    opacity: 0;
+    
+  }
+
+  .bottomHamb{
+    position: relative;
+    background-color: black;
+    transform: rotate(45deg) translate(-9px    , -5px );
+  }
+
+  .topHamb{
+    position: relative;
+    background-color: black;
+    transform: rotate(-45deg)  translate(-7px , 4px );
+  }
+
+}

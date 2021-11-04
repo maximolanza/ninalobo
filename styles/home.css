@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+* { 
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+  }
+  .video-background {
+    background: #000;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    height: 100vh;
+    z-index: -99;
+    overflow: hidden;
+  }
+  .video-foreground,
+  .video-background iframe { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  #vidtop-content {
+      top: 0;
+      color: #fff;
+  }
+  .home-video-control-buttons{
+    z-index: 10;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .home-video-control-buttons .button, .home-video-control-buttons .button path {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    fill: white;
+
+  }
+
+  .home-video-control-buttons .mute{
+    background-color: transparent;
+    border: none;
+    -webkit-highlight: none;
+  }
+
+  .home-video-control-buttons .button:hover {
+    fill: white;
+  }
+
+  
+  .defs {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .hiddenSvg{
+    fill: transparent !important;
+  }
+  .home-video-control-buttons .buttons {
+    padding: 1rem;
+    float: left;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+  }
+  /*
+  .vid-info { position: absolute; top: 0; width:80%; background: margin: auto; rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+  */
+  @media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+  }
+  @media all and (max-width: 600px) {
+  .vid-info { width: 50%; padding: .5rem; }
+  .vid-info h1 { margin-bottom: .2rem; }
+  }
+  @media all and (max-width: 500px) {
+  .vid-info .acronym { display: none; }
+  }
+  
+
+  .background-video{
+    opacity: .5;
+  }
+  /* NL */
+  
+  
+    
+.overlay{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgba(0,0,0,.3);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white; 
+}
+
+section{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home{
+  height: 100%;
+}
+
+#greetings h1{
+  font-size: 4rem;
+}
+
+h2{
+  text-align: center;
+  font-size: 3rem;
+}
+

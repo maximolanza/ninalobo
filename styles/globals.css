@@ -1,11 +1,20 @@
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  /*font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  font-size: 16px;*/
+  }
 
+
+  :root{
+    --primary-blue:#8a98d5;
+    --tree-pink: #b56ebe;
+    --skin-pink:#fbaae5;
+    --jacket-green:#40aea1; 
+  }
 a {
   color: inherit;
   text-decoration: none;
