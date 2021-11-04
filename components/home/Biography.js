@@ -7,8 +7,9 @@ const Biography = ({ integrantes }) => {
         <section >
             <h2 id="biography">Biografía</h2>
             {integrantes && integrantes.length > 0 && (
-                integrantes.map((loba) => (
+                integrantes.map((loba, index) => (
                     <Image
+                        key={index}
                         src={loba.foto.url}
                         alt={loba.foto.fileName}
                         width="200px"
