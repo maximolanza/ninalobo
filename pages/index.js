@@ -71,8 +71,9 @@ export default function Home({ integrantes }) {
 
         <main>
           <Greetings />
-          <Biography integrantes={integrantes} />
           <Music />
+          <Biography integrantes={integrantes} />
+
           <Calendar />
           <Multimedia />
           <Store />

@@ -3,23 +3,38 @@ import Image from 'next/image';
 const Biography = ({ integrantes }) => {
     console.log(integrantes)
     // integrantes && console.log(integrantes)
+
+    const _width = 250;
+    const _height = 250;
     return (
         <section >
             <h2 id="biography">Biografía</h2>
-            {integrantes && integrantes.length > 0 && (
-                integrantes.map((loba, index) => (
-                    <Image
-                        key={index}
-                        src={loba.foto.url}
-                        alt={loba.foto.fileName}
-                        width="200px"
-                        height="200px" />
-                )
+            <div className="biography-photos">
+                {integrantes && integrantes.length > 0 && (
+                    integrantes.map((loba, index) => (
+                        <div class="biography-photo"
+                            style={{ width: _width + 10, height: _height + 10 }}
+                        >
+                            <div className="image-container">
+                                <div className="image-crop" style={{ width: _width, height: _height }}>
+                                    <Image
+                                        style={{ padding: 10 }}
+                                        key={index}
+                                        src={loba.foto.url}
+                                        alt={loba.foto.fileName}
+                                        width={_width}
+                                        height={_height}
 
-                )
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    )
 
-            )}
-        </section>
+                    )
+
+                )}</div>
+        </section >
     );
 }
 
