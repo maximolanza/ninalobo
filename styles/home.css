@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
 
-* { 
+* {
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
     font-size: 16px;
@@ -15,7 +15,7 @@
     overflow: hidden;
   }
   .video-foreground,
-  .video-background iframe { 
+  .video-background iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@
     fill: white;
   }
 
-  
+
   .defs {
     position: absolute;
     top: -9999px;
@@ -87,15 +87,15 @@
   @media all and (max-width: 500px) {
   .vid-info .acronym { display: none; }
   }
-  
+
 
   .background-video{
     opacity: .5;
   }
   /* NL */
-  
-  
-    
+
+
+
 .overlay{
   width: 100%;
   height: 100%;
@@ -104,7 +104,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: white; 
+  color: white;
 }
 
 section{
@@ -125,3 +125,82 @@ h2{
   font-size: 3rem;
 }
 
+
+
+/* Biography */
+.biography-photos{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.biography-photo{
+  /* height: 270px; */
+  padding: 10px 0px;
+  overflow: hidden;
+  filter:grayscale(100%);
+}
+.biography-photo .image-container .image-crop{
+  margin: 0;
+  padding: 10px;
+  /* height: 250px; */
+  
+}
+.biography-photo .image-container .image-crop:hover{
+  animation: imgborder .5s normal forwards;
+}
+
+  .image-crop{
+    overflow: hidden;
+  }
+
+.biography-photo:hover{
+  animation: imgcolor 1s normal forwards;
+}
+
+@keyframes imgcolor {
+  0%{
+      filter:grayscale(100%);
+  }
+  100%{
+      filter:grayscale(0%); 
+  }
+}
+
+@keyframes imgborder {
+  0%{
+      border: 0px solid black;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0);
+  }
+  99%{border: 1px solid black;
+      background-color: rgba(0, 0, 0, .5);
+      padding: 0px;
+  }
+  100%{
+      border: 2px solid black;
+      background-color: rgba(0, 0, 0, 1);
+      padding: 0px;
+      filter:grayscale(0%); 
+  }
+}
+/*
+.biography-photo img:hover{
+  animation: imgborder 1s normal 1 farwards;
+}
+*/
+
+.biography-photo{
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  /* flex-basis: 250px; */
+}
+
+
+.biography-text{
+  text-align: center;
+}
