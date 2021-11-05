@@ -14,7 +14,7 @@ const Biography = ({ integrantes }) => {
                     integrantes.map((loba, index) => (
                         <div
                             key={index}
-                            class="biography-photo"
+                            className="biography-photo"
                             style={{ width: _width + 10, height: _height + 10 }}
                         >
                             <div className="image-container">
