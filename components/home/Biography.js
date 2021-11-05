@@ -12,14 +12,16 @@ const Biography = ({ integrantes }) => {
             <div className="biography-photos">
                 {integrantes && integrantes.length > 0 && (
                     integrantes.map((loba, index) => (
-                        <div class="biography-photo"
+                        <div
+                            key={index}
+                            class="biography-photo"
                             style={{ width: _width + 10, height: _height + 10 }}
                         >
                             <div className="image-container">
                                 <div className="image-crop" style={{ width: _width, height: _height }}>
                                     <Image
                                         style={{ padding: 10 }}
-                                        key={index}
+
                                         src={loba.foto.url}
                                         alt={loba.foto.fileName}
                                         width={_width}
