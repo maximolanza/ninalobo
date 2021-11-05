@@ -108,7 +108,6 @@
 }
 
 section{
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -116,6 +115,9 @@ section{
   height: 100%;
 }
 
+#greetings{
+  height: 100vh;
+}
 #greetings h1{
   font-size: 4rem;
 }
@@ -126,6 +128,17 @@ h2{
 }
 
 
+/* Music*/
+.disc-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.spotify-disc-container{
+
+}
 
 /* Biography */
 .biography-photos{

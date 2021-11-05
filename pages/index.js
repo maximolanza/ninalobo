@@ -14,7 +14,7 @@ export async function getStaticProps() {
     "https://api-us-east-1.graphcms.com/v2/ckvk8b9lu68mc01z09pun1ugy/master"
   );
 
-  console.log(graphcms)
+  // console.log(graphcms)
   const { integrantes } = await graphcms.request(
     gql`
     query members {
@@ -35,14 +35,33 @@ export async function getStaticProps() {
       `
   );
 
-  console.log("integrantes: ", integrantes);
+  const { discos } = await graphcms.request(
+    gql`
+    query discs {
+      discos {
+        id
+        codigo
+        titulo
+        portada {
+          size
+          url
+          width
+        }
+      }
+    }
+      `
+  );
+
+
+
   return {
     props: {
       integrantes,
+      discos
     },
   };
 }
-export default function Home({ integrantes }) {
+export default function Home({ integrantes, discos }) {
   return (
     <>
       <Head>
@@ -71,7 +90,7 @@ export default function Home({ integrantes }) {
 
         <main>
           <Greetings />
-          <Music />
+          <Music discos={discos} />
           <Biography integrantes={integrantes} />
 
           <Calendar />
