@@ -1,26 +1,36 @@
-import SpotifyDisc from "./SpotifyDisc";
+// import SpotifyDisc from "./SpotifyDisc";
+import SectionTitle from './SectionTitle';
+import { useState } from 'react';
+import Disc from "./Disc";
 
 const Music = ({ discos }) => {
-    console.log(discos)
+
+    const [selectedDisc, setSelectedDisc] = useState();
+
     return (
         <section>
-            <h2 id="music">Música</h2>
+            <SectionTitle id="music" title="Música" />
             <div className="disc-container">
 
                 {discos && discos.map(
-                    (disco, index) =>
-                    (
-                        < SpotifyDisc
-                            key={index}
-                            code={disco.codigo}
-                        />
+                    (disco, index) => (
+                        disco && disco.portada && disco.portada.url && (
+                            <div key={index} >
+
+                                <Disc
+                                    key={index}
+                                    cover={disco.portada.url}
+                                    description={disco.titulo}
+
+                                />
+                            </div>
+                        )
                     )
+
                 )
                 }
-
-
             </div>
-        </section>
+        </section >
     );
 }
 

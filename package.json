@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "graphql": "^16.0.1",
     "graphql-request": "^3.6.1",
     "graphql-tag": "^2.12.5",

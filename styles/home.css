@@ -150,6 +150,9 @@ h2{
   
 }
 
+.photo{
+  padding: 10
+}
 .biography-photo{
   /* height: 270px; */
   padding: 10px 0px;
@@ -217,3 +220,81 @@ h2{
 .biography-text{
   text-align: center;
 }
+
+
+
+/*Disc*/
+
+.container-disc{
+  width: 100%;
+  text-align: center;
+}
+.disc-card{
+  /*border: 1px solid red;*/
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cover, .disc{
+  height: 200px;
+  width: 200px;
+  transition: all .8s ease-in;
+}
+.cover{
+  /*border: 2px solid blue;*/
+  /*background: blue;*/
+  /* background-image: url(https://f4.bcbits.com/img/a3710934300_10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  z-index: 4 !important;
+  /* position: fixed;*/
+  
+  
+}
+.disc{
+  border-radius: 50%;
+  background-image: url(https://cdn.pixabay.com/photo/2013/07/12/18/04/dvd-152917_960_720.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+}
+
+.disc::before{
+  filter: brightness(.3)
+}
+
+  /*.cover:hover{
+  transform: translate(-20%, 0);
+  transition: all .8s ease-in;
+  
+}
+
+.disc:hover{
+  transform: translate(10%, 0);
+  transition: all .8s ease-in;
+}*/
+
+
+.disc-card:hover .cover{
+  transform: translate(-20%, 0);
+  transition: all .8s ease-in;
+}
+
+.disc-card:hover .disc{
+  transform: translate(10%, 0) ;
+  transition: all .8s ease-in;
+}
+
+.centerdisc{
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+/* Disc Ends*/

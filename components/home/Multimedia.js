@@ -1,7 +1,9 @@
+
+import SectionTitle from './SectionTitle';
 const Multimedia = () => {
     return (
         <section >
-            <h2 id="multimedia">Multimedia</h2>
+            <SectionTitle id="multimedia" title="Multimedia" />
         </section>
     );
 }

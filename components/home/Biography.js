@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionTitle from './SectionTitle';
 
 const Biography = ({ integrantes }) => {
     console.log(integrantes)
@@ -6,13 +7,42 @@ const Biography = ({ integrantes }) => {
 
     const _width = 250;
     const _height = 250;
+
+    // const isOdd = (number) => {
+    //     return number % 2 === 1;
+    // }
+    // const getDirection = (index) => {
+    //     return 'flip-left';
+    //     /*switch (index) {
+    //         case 0:
+    //             return 'right';
+    //             break;
+    //         case 1:
+    //             return 'up-right'
+    //             break;
+    //         case 2:
+    //             return 'up';
+    //             break;
+    //         case 3:
+    //             return 'up-left'
+    //             break;
+    //         case 4:
+    //             return 'left';
+    //             break;
+    //         default:
+    //             break;
+    //     }*/
+    // }
     return (
         <section >
-            <h2 id="biography">Biografía</h2>
+            <SectionTitle id="biography" title="Biografía" />
             <div className="biography-photos">
                 {integrantes && integrantes.length > 0 && (
                     integrantes.map((loba, index) => (
-                        <div
+                        <div data-aos={/*`fade-${getDirection(index)}`*/'flip-right'}
+                            data-aos-offset="300"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"
                             key={index}
                             className="biography-photo"
                             style={{ width: _width + 10, height: _height + 10 }}
@@ -20,8 +50,8 @@ const Biography = ({ integrantes }) => {
                             <div className="image-container">
                                 <div className="image-crop" style={{ width: _width, height: _height }}>
                                     <Image
-                                        style={{ padding: 10 }}
 
+                                        className="photo"
                                         src={loba.foto.url}
                                         alt={loba.foto.fileName}
                                         width={_width}

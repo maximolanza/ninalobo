@@ -56,13 +56,13 @@ const NavBar = () => {
             <HamburugerMenu hamburguer={hamburguer} setHamburuger={onSetOverlay} />
 
             <div className={overlayIsOpen ? "overlayMenu overlayMenuOpen" : "menu"} >
-                <a href="#" onClick={(e) => scrollTo('greetings', e)}> Inicio </a>
-                <a href="#" onClick={(e) => scrollTo('biography', e)}> Biografía </a>
-                <a href="#" onClick={(e) => scrollTo('music', e)}> Música </a>
-                <a href="#" onClick={(e) => scrollTo('calendar', e)}> Calendario </a>
-                <a href="#" onClick={(e) => scrollTo('multimedia', e)}> Multimedia </a>
-                <a href="#" onClick={(e) => scrollTo('store', e)}> Tienda </a>
-                <a href="#" onClick={(e) => scrollTo('contact', e)}> Contacto </a>
+                <a data-aos="zoom-out-down" data-aos-delay="50" href="#" onClick={(e) => scrollTo('greetings', e)}> Inicio </a>
+                <a data-aos="zoom-out-down" data-aos-delay="100" href="#" onClick={(e) => scrollTo('biography', e)}> Biografía </a>
+                <a data-aos="zoom-out-down" data-aos-delay="150" href="#" onClick={(e) => scrollTo('music', e)}> Música </a>
+                <a data-aos="zoom-out-down" data-aos-delay="200" href="#" onClick={(e) => scrollTo('calendar', e)}> Calendario </a>
+                <a data-aos="zoom-out-down" data-aos-delay="250" href="#" onClick={(e) => scrollTo('multimedia', e)}> Multimedia </a>
+                <a data-aos="zoom-out-down" data-aos-delay="300" href="#" onClick={(e) => scrollTo('store', e)}> Tienda </a>
+                <a data-aos="zoom-out-down" data-aos-delay="350" href="#" onClick={(e) => scrollTo('contact', e)}> Contacto </a>
             </div>
 
 

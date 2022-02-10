@@ -7,52 +7,21 @@ import Calendar from '../components/home/Calendar'
 import Multimedia from '../components/home/Multimedia'
 import Contact from '../components/home/Contact'
 import Store from '../components/home/Store'
-import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
+import { integrantesGQL, discosGQL } from "../components/queries/graphqlQueries";
 
 export async function getStaticProps() {
+
   const graphcms = new GraphQLClient(
     "https://api-us-east-1.graphcms.com/v2/ckvk8b9lu68mc01z09pun1ugy/master"
   );
-
-  // console.log(graphcms)
   const { integrantes } = await graphcms.request(
-    gql`
-    query members {
-      integrantes {
-        id
-        nombre
-        apellido
-        apodo
-        descripcion
-        foto {
-          id
-          fileName
-          handle
-          url(transformation: {document: {output: {format: webp}}})
-        }
-      }
-    }
-      `
+    integrantesGQL
   );
 
   const { discos } = await graphcms.request(
-    gql`
-    query discs {
-      discos {
-        id
-        codigo
-        titulo
-        portada {
-          size
-          url
-          width
-        }
-      }
-    }
-      `
+    discosGQL
   );
-
-
 
   return {
     props: {

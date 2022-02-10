@@ -1,7 +1,9 @@
+import SectionTitle from './SectionTitle';
 const Calendar = () => {
+
     return (
         <section>
-            <h2 id="calendar">Calendario</h2>
+            <SectionTitle id="calendar" title="Calendario" />
         </section>
     );
 }
